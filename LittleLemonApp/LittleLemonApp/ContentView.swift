@@ -10,15 +10,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Marzaki Title").font(.marKaziTitle)
+            Text("Marzaki Sub Title").font(.marKaziSubTitle)
+            Spacer()
+            Text("Karla Lead Text").font(.karlaLeadText)
+            Text("Karla Section Title").font(.karlaSectionTitle)
+            Text("Karal Section Category").font(.karlaSectionCategory)
+            Text("Karla Card Title").font(.karlaCardTitle)
+            Text("Karla Paragraph").font(.karlaParagraph)
         }
         .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
