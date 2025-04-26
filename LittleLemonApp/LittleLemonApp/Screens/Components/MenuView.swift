@@ -34,7 +34,7 @@ struct MenuView: View {
                                     searchCategory = category
                                 }
                             } label: {
-                                MenuCategoryListItem(title: category,isSelected: searchCategory == category)
+                                MenuCategoryItem(title: category,isSelected: searchCategory == category)
                             }
 
                         }

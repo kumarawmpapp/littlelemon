@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuCategoryListItem:View {
+struct MenuCategoryItem:View {
     let title:String
     let isSelected:Bool
     

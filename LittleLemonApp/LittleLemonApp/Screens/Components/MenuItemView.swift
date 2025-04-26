@@ -45,7 +45,7 @@ struct MenuItemView:View{
                     }
                 )
             }
-            NavigationLink(destination: ItemDetailView(dish: dish)) {
+            NavigationLink(destination: DishDetailView(dish: dish)) {
                 
             }.buttonStyle(PlainButtonStyle())
         }

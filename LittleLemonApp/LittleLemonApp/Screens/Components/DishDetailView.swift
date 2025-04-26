@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ItemDetailView: View {
+struct DishDetailView: View {
     let dish: Dish
     
     init(dish: Dish) {
