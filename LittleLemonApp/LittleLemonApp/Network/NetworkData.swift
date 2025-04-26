@@ -8,6 +8,8 @@
 import CoreData
 import SwiftUI
 
+let kURL = "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json"
+
 struct Menu {
     
     func getMenuData(_ context:NSManagedObjectContext){

@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+let heroTitle = "Little Lemon"
+let heroAddress = "Chicago"
+let heroDesc = "We are a family owned Mediterranen restaurant, focused on traditional recipes served with a modern twist"
+
 struct AppHeroView: View{
     let bottomView:AppTextView?
     
