@@ -7,10 +7,10 @@
 
 import Foundation
 
-let kFirstName = "first name key"
-let kLastName = "last name key"
-let kEmail = "email key"
-let kPhoneNumber = "phone number"
+let kFirstName = "kFirstName"
+let kLastName = "kLastName"
+let kEmail = "kEmail"
+let kPhoneNumber = "kPhoneNumber"
 let kIsOrderStatusChecked = "kIsOrderStatusChecked"
 let kIsPasswordChangesChecked = "kIsPasswordChangesChecked"
 let kIsSpecialOffersChecked = "kIsSpecialOffersChecked"
