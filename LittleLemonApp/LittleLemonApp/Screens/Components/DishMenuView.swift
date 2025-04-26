@@ -79,6 +79,25 @@ struct DishMenuView: View {
     }
 }
 
+struct MenuCategoryItem:View {
+    let title:String
+    let isSelected:Bool
+    
+    init(title: String,isSelected:Bool) {
+        self.title = title
+        self.isSelected = isSelected
+    }
+    
+    var body: some View{
+        Text(title)
+            .bold()
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+            .background(isSelected ? Color.primaryBlue : Color.secondaryWhite)
+            .cornerRadius(30)
+            .foregroundColor(isSelected ? Color.secondaryWhite : Color.primaryBlue)
+    }
+}
+
 struct DishMenuItemView:View{
     let dish:Dish
     
@@ -123,6 +142,55 @@ struct DishMenuItemView:View{
         }
     }
     
+}
+
+struct DishDetailView: View {
+    let dish: Dish
+    
+    init(dish: Dish) {
+        self.dish = dish
+    }
+    
+    var body: some View {
+        ScrollView{
+            VStack{
+                AsyncImage(
+                    url:URL(string: "\(dish.image ?? "")"),
+                    content: { image in
+                        image.resizable()
+                            .frame(maxWidth: .infinity)
+                            .aspectRatio(contentMode: .fit)
+                    },
+                    placeholder: {
+                        Rectangle()
+                            .frame(maxWidth: .infinity, minHeight:300, maxHeight:300)
+                            .foregroundColor(.secondaryBlack)
+                    }
+                )
+                Text("$ \(dish.price ?? "")")
+                    .fontWeight(.heavy)
+                    .font(.karlaLeadText)
+                    .foregroundColor(.primaryBlue)
+                    .frame(maxWidth: .infinity,alignment: .trailing)
+                    .padding(.horizontal,10)
+                    .padding(.vertical,5)
+                Text("\(dish.desc ?? "")")
+                    .lineLimit(2)
+                    .fontWeight(.light)
+                    .font(.karlaParagraph)
+                    .foregroundColor(.primaryBlue)
+                    .padding(.horizontal,10)
+                    .padding(.vertical,5)
+            }.navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("\(dish.title ?? "")")
+                            .font(.karlaLeadText)
+                            .padding(EdgeInsets(top: 2, leading: 0, bottom: 2, trailing: 0))
+                    }
+                }
+        }
+    }
 }
 
 struct MenuView_Previews: PreviewProvider {
