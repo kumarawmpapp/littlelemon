@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserProfile: View {
+struct UserProfileView: View {
     @Environment(\.presentationMode) var presentation
     
     @State private var firstName: String = (UserDefaults.standard.string(forKey: kFirstName) ?? "")
@@ -148,6 +148,6 @@ struct UserProfile: View {
 
 struct UserProfile_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfile(backAction:{})
+        UserProfileView(backAction:{})
     }
 }

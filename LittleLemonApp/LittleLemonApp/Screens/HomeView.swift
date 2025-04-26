@@ -18,7 +18,7 @@ struct HomeView: View {
                 MenuView()
             }
             else{
-                UserProfile(backAction:{
+                UserProfileView(backAction:{
                     isMenuScreen = true
                 })
             }
