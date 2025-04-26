@@ -15,7 +15,7 @@ struct HomeView: View {
     var body: some View {
         Section{
             if isMenuScreen{
-                MenuView()
+                DishMenuView()
             }
             else{
                 UserProfileView(backAction:{

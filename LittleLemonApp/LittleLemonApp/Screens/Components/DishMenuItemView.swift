@@ -1,5 +1,5 @@
 //
-//  MenuItemView.swift
+//  DishMenuItemView.swift
 //  LittleLemonApp
 //
 //  Created by Pradeep Kumara on 4/25/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuItemView:View{
+struct DishMenuItemView:View{
     let dish:Dish
     
     init(dish: Dish) {

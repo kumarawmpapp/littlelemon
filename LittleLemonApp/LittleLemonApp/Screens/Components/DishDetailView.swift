@@ -1,5 +1,5 @@
 //
-//  ItemDetailView.swift
+//  DishDetailView.swift
 //  LittleLemonApp
 //
 //  Created by Pradeep Kumara on 4/25/25.

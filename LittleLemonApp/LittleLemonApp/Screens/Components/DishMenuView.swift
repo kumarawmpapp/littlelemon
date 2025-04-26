@@ -1,5 +1,5 @@
 //
-//  MenuView.swift
+//  DishMenuView.swift
 //  LittleLemonApp
 //
 //  Created by Pradeep Kumara on 4/25/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuView: View {
+struct DishMenuView: View {
     @State var searchText:String = ""
     @State var searchCategory:String = ""
     
@@ -46,7 +46,7 @@ struct MenuView: View {
                 List {
                     ForEach(dishes, id: \.self) { dish in
                         
-                        MenuItemView(dish: dish)
+                        DishMenuItemView(dish: dish)
 
                     }
                 }
@@ -83,6 +83,6 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        DishMenuView()
     }
 }
