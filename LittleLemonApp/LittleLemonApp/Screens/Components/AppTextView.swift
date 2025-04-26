@@ -24,9 +24,9 @@ struct AppTextView: View {
                 Image(systemName: iconName)
             }
             TextField(label, text: value)
-                .onChange(of: value.wrappedValue) { newValue in
-                onTapAction()
-            }
+                .onChange(of: value.wrappedValue) { _, _ in
+                    onTapAction()
+                }
         }
             .padding()
             .background(Color.secondaryWhite)
